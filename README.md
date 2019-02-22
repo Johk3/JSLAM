@@ -1,8 +1,8 @@
-# Darwin 
+# SLAMBERRY
 
 ![](https://img.shields.io/node/v/v.svg) ![](https://img.shields.io/badge/license-MIT-lightgray.svg) ![](https://img.shields.io/badge/version-1.0.0-yellow.svg) ![](https://img.shields.io/badge/build-passing-green.svg)
 
-> A Microbial Information Tool for scientific informational use. 
+> An environmental mapping tool for automating the rover
 
 ---
 
