@@ -56,19 +56,19 @@ if __name__ == "__main__":
     while 1:
         # Capture frame by frame and scale it down
         ret, frame = cap.read()
+
         frame = cv2.resize(frame, (W, H), interpolation=cv2.INTER_LINEAR)
 
         # Our operations on the frame come here
         rgb = cv2.cvtColor(frame, cv2.COLOR_RGBA2RGB)
 
-        match_points = extractor.getFrame(frame)
-        plt.imshow(match_points,),plt.show()
-        break
+        # match_points = extractor.getFrame(frame)
+        # plt.imshow(match_points,),plt.show()
+        # break
 
         cv2.imshow('frame', rgb)
         if cv2.waitKey(1) & 0xFF == ord("q"):
             break
-
     # When everything done, release the capture
     cap.release()
     cv2.destroyAllWindows()
