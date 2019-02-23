@@ -2,17 +2,20 @@
 import cv2
 import numpy as np
 from matplotlib import pyplot as plt
+from Components.display import Display
+import keyboard
+
 
 class Extractor:
     def __init__(self):
         pass
 
-    def getFrame(self, frame):
+    def getFrame(self, frame, W, H):
         # FLANN based Matcher
 
         frame1 = frame
-        frame2 = frame
-
+        frame2 = cv2.cvtColor(frame, cv2.IMREAD_GRAYSCALE)
+        frame2 = cv2.resize(frame2, (W, H), interpolation=cv2.INTER_LINEAR)
         # Initiate SIFT detector
         sift = cv2.xfeatures2d.SIFT_create()
 
@@ -35,9 +38,9 @@ class Extractor:
         # Ratio test as per Lowe's paper
         for i,(m,n) in enumerate(matches):
             if m.distance < 0.7*n.distance:
-                matchesMask[i] = [1,0]
+                matchesMask[i] = [0,0]
 
-        draw_params = dict(matchColor = (0, 255, 0),
+        draw_params = dict(matchColor = (20, 200, 0),
                            singlePointColor = (255, 0, 0),
                            matchesMask = matchesMask,
                            flags = 0)
@@ -52,6 +55,7 @@ if __name__ == "__main__":
     H = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT)) // 2
     W = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH)) // 2
     extractor = Extractor()
+    display = Display()
 
     while 1:
         # Capture frame by frame and scale it down
@@ -60,18 +64,17 @@ if __name__ == "__main__":
         frame = cv2.resize(frame, (W, H), interpolation=cv2.INTER_LINEAR)
 
         # Our operations on the frame come here
-        rgb = cv2.cvtColor(frame, cv2.COLOR_RGBA2RGB)
+        # rgb = cv2.cvtColor(frame, cv2.COLOR_RGBA2RGB)
 
-        # match_points = extractor.getFrame(frame)
-        # plt.imshow(match_points,),plt.show()
-        # break
+        # Imshow not working on the current opencv version
+        # cv2.imshow('frame', rgb)
 
-        cv2.imshow('frame', rgb)
-        if cv2.waitKey(1) & 0xFF == ord("q"):
+        display.displayVideo(frame, extractor, W, H)
+        if keyboard.is_pressed("q"):
             break
     # When everything done, release the capture
-    cap.release()
-    cv2.destroyAllWindows()
+    # cap.release()
+    # cv2.destroyAllWindows()
 
 
 

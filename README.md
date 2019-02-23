@@ -1,10 +1,10 @@
 # JSLAM 
 
-![](https://img.shields.io/node/v/v.svg) ![](https://img.shields.io/badge/license-MIT-lightgray.svg) ![](https://img.shields.io/badge/version-1.0.0-yellow.svg) ![](https://img.shields.io/badge/build-passing-green.svg)
+![](https://img.shields.io/badge/license-MIT-lightgray.svg) ![](https://img.shields.io/badge/version-0.3.0-yellow.svg) ![](https://img.shields.io/badge/build-passing-green.svg)
 
 > Simultaneos localization and mapping with python.
  
-![alt text](flann_map.png)
+![](videos/demo.gif)
 
 ---
 
@@ -130,7 +130,7 @@ SOFTWARE.
 
 ## Version Info 
 
-The current stable version of JSLAM is: 0.2.5  
+The current stable version of JSLAM is: 0.3.0  
 
 --- 
 
