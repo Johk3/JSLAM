@@ -4,18 +4,18 @@ import numpy as np
 from matplotlib import pyplot as plt
 from Components.display import Display
 import keyboard
+import time
 
 
 class Extractor:
     def __init__(self):
         pass
 
-    def getFrame(self, frame, W, H):
+    def getFrame(self, frame):
         # FLANN based Matcher
 
         frame1 = frame
         frame2 = cv2.cvtColor(frame, cv2.IMREAD_GRAYSCALE)
-        frame2 = cv2.resize(frame2, (W, H), interpolation=cv2.INTER_LINEAR)
         # Initiate SIFT detector
         sift = cv2.xfeatures2d.SIFT_create()
 
@@ -50,16 +50,21 @@ class Extractor:
 
 
 if __name__ == "__main__":
+    start_time = time.time()
     cap = cv2.VideoCapture("videos/fastcar.mp4")
 
     H = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT)) // 2
     W = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH)) // 2
     extractor = Extractor()
-    display = Display()
-
+    display = Display(W, H)
     while 1:
         # Capture frame by frame and scale it down
         ret, frame = cap.read()
+
+        if keyboard.is_pressed("q") or not ret:
+            print("Quitting")
+            print("Program ran for {} Seconds".format(int(time.time() - start_time)))
+            break
 
         frame = cv2.resize(frame, (W, H), interpolation=cv2.INTER_LINEAR)
 
@@ -69,10 +74,9 @@ if __name__ == "__main__":
         # Imshow not working on the current opencv version
         # cv2.imshow('frame', rgb)
 
-        display.displayVideo(frame, extractor, W, H)
-        if keyboard.is_pressed("q"):
-            break
+        display.displayVideo(frame, extractor)
     # When everything done, release the capture
+    display.cleanUp()
     # cap.release()
     # cv2.destroyAllWindows()
 

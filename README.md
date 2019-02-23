@@ -30,10 +30,11 @@ These are the sections on the [README.md](https://github.com/Johk3/JSLAM/README.
 ## Description 
 JSLAM is a python boi that is used to map the environment that the rover will be in. It works by constructing or updating a map of an unknown environment while simultaneously keeping track of an agent's location within it.
 
-If you find a bug on our website be sure to checkout the contact page of the website to tell about the bug or open an issue request here on github. We appreciate every contribution and we try to credit the biggest contributors by placing their name in this readme.
+If you find a bug in the code be sure to open an issue reqest about it. We appreciate every contribution and we try to credit the biggest contributors by placing their name in this readme.
 
 ## What can I do with it
-In this phase, not much, but after its going out of the beta you couldmap all of your surroundings and potentially have a rover to avoid them
+In this phase, not much, but after its going out of the beta you could map all of your surroundings and potentially have a rover to avoid them.
+
  
 #### Technologies 
 
