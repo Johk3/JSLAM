@@ -26,7 +26,7 @@ class Extractor:
         # FLANN parameters
         FLANN_INDEX_KDTREE = 0
         index_params = dict(algorithm=FLANN_INDEX_KDTREE, trees=5)
-        search_params = dict(checks=50)
+        search_params = dict(checks=25)
 
         flann = cv2.FlannBasedMatcher(index_params, search_params)
 
@@ -59,7 +59,9 @@ if __name__ == "__main__":
     display = Display(W, H)
     while 1:
         # Capture frame by frame and scale it down
+
         ret, frame = cap.read()
+
 
         if keyboard.is_pressed("q") or not ret:
             print("Quitting")
@@ -75,6 +77,7 @@ if __name__ == "__main__":
         # cv2.imshow('frame', rgb)
 
         display.displayVideo(frame, extractor)
+
     # When everything done, release the capture
     display.cleanUp()
     # cap.release()
