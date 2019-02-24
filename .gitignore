@@ -2,3 +2,4 @@ venv/
 .idea/
 map.avi
 Components/__pycache__/
+videos/frame.png
