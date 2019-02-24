@@ -13,7 +13,7 @@ class Display:
         self.H = H
 
         sdl2.ext.init()
-        self.window = sdl2.ext.Window("JSLAM", size=(W, H))
+        self.window = sdl2.ext.Window("JSLAM", size=(W*2, H))
         self.window.show()
 
         self.factory = sdl2.ext.SpriteFactory(sdl2.ext.SOFTWARE)
