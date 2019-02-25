@@ -63,13 +63,13 @@ pip install -r requirements.txt
 
 ## Updates 
 
-This is where you can see all the new stuff in the next version of JSLAM
+This is where you can see all the JSLAM version's
 
-Updates to New Version: 
+0.3.0: 
 
-    Better tracking
+    Switched to SDL2 for displaying video
 
-    More yeet
+    Performance updates
 
 ## References 
 
@@ -78,8 +78,6 @@ Updates to New Version:
 --- 
 
 ## Contributing
-
-Do your thing my boi. i have no idea
 
 If you wish to help on this project you can simply make changes to the file and post your changes and if they are appreciated we will merge them to the Master branch.
 
