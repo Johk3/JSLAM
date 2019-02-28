@@ -30,11 +30,10 @@ These are the sections on the [README.md](https://github.com/Johk3/JSLAM/README.
 ## Description 
 JSLAM is a python boi that is used to map the environment that the rover will be in. It works by constructing or updating a map of an unknown environment while simultaneously keeping track of an agent's location within it.
 
-If you find a bug in the code be sure to open an issue reqest about it. We appreciate every contribution and we try to credit the biggest contributors by placing their name in this readme.
+If you find a bug on our website be sure to checkout the contact page of the website to tell about the bug or open an issue request here on github. We appreciate every contribution and we try to credit the biggest contributors by placing their name in this readme.
 
 ## What can I do with it
-In this phase, not much, but after its going out of the beta you could map all of your surroundings and potentially have a rover to avoid them.
-
+In this phase, not much, but after its going out of the beta you couldmap all of your surroundings and potentially have a rover to avoid them
  
 #### Technologies 
 
@@ -64,13 +63,13 @@ pip install -r requirements.txt
 
 ## Updates 
 
-This is where you can see all the new stuff in the next version of JSLAM
+This is where you can see all the JSLAM version's
 
-Updates to New Version: 
+0.3.0: 
 
-    Better tracking
+    Switched to SDL2 for displaying video
 
-    More yeet
+    Performance updates
 
 ## References 
 
@@ -79,8 +78,6 @@ Updates to New Version:
 --- 
 
 ## Contributing
-
-Do your thing my boi. i have no idea
 
 If you wish to help on this project you can simply make changes to the file and post your changes and if they are appreciated we will merge them to the Master branch.
 
