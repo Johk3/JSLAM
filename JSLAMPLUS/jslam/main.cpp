@@ -2,6 +2,10 @@
 #include "opencv2/imgproc.hpp"
 #include "opencv2/video/background_segm.hpp"
 #include "opencv2/video/tracking.hpp"
+#include "opencv2/xfeatures2d.hpp"
+#include "opencv2/core.hpp"
+#include "opencv2/features2d.hpp"
+#include "opencv2/imgcodecs.hpp"
 #include <iostream>
  
 int main( int argc, char** argv ) {
@@ -27,7 +31,7 @@ int main( int argc, char** argv ) {
       std::cout << "Error opening video stream or file" << "\n";
       return -1;
   }
-  
+
   while(1){
       int W = cap.get(cv::CAP_PROP_FRAME_WIDTH)/2;
       int H = cap.get(cv::CAP_PROP_FRAME_HEIGHT)/2;
