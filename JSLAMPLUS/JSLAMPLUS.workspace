@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeLite_Workspace Name="JSLAMPLUS" Database="" Version="10.0.0">
-  <Project Name="jslam" Path="jslam/jslam.project" Active="Yes"/>
+  <Project Name="jslam" Path="jslam/jslam.project" Active="No"/>
+  <Project Name="Solving_Problems" Path="../../../cpp/Solving_Problems/Solving_Problems.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="no">
       <Environment/>
       <Project Name="jslam" ConfigName="Debug"/>
+      <Project Name="Solving_Problems" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Environment/>
       <Project Name="jslam" ConfigName="Release"/>
+      <Project Name="Solving_Problems" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>

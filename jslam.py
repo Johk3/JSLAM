@@ -37,8 +37,10 @@ class Extractor:
 
         # Ratio test as per Lowe's paper
         for i,(m,n) in enumerate(matches):
+            print(m.distance, n)
             if m.distance < 0.7*n.distance:
                 matchesMask[i] = [0,0]
+        exit(0)
 
         draw_params = dict(matchColor = (20, 200, 0),
                            singlePointColor = (255, 0, 0),

@@ -1,8 +1,8 @@
 .PHONY: clean All
 
 All:
-	@echo "----------Building project:[ jslam - Release ]----------"
-	@cd "jslam" && "$(MAKE)" -f  "jslam.mk" PreBuild && "$(MAKE)" -f  "jslam.mk"
+	@echo "----------Building project:[ Solving_Problems - Release ]----------"
+	@cd "/media/johk/Mainframe/cpp/Solving_Problems" && "$(MAKE)" -f  "Solving_Problems.mk"
 clean:
-	@echo "----------Cleaning project:[ jslam - Release ]----------"
-	@cd "jslam" && "$(MAKE)" -f  "jslam.mk" clean
+	@echo "----------Cleaning project:[ Solving_Problems - Release ]----------"
+	@cd "/media/johk/Mainframe/cpp/Solving_Problems" && "$(MAKE)" -f  "Solving_Problems.mk" clean
