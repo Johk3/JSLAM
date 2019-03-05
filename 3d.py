@@ -47,9 +47,6 @@ while not pangolin.ShouldQuit():
     gl.glLineWidth(1)
     gl.glColor3f(0.0, 0.0, 1.0)
     pangolin.DrawCamera(pose, 0.5, 0.75, 0.8)
-    scam = pangolin.OpenGlRenderState(
-        pangolin.ProjectionMatrix(W, H, 420, 420, 0.5, 0.75, 0.8, 100),
-        pangolin.ModelViewLookAt(0, 0, 0, 1, 1, z+1, pangolin.AxisDirection.AxisY))
 
     z += 0.1
     xc += 0.1
