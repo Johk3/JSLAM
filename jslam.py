@@ -31,15 +31,17 @@ class Extractor:
         flann = cv2.FlannBasedMatcher(index_params, search_params)
 
         matches = flann.knnMatch(des1, des2, k=2)
-
         # Need to draw only good matches, so create a mask
         matchesMask = [[0,0] for i in range(len(matches))]
 
+        points = []
+
         # Ratio test as per Lowe's paper
         for i,(m,n) in enumerate(matches):
-            print(m.distance, n)
+            points.append([m.trainIdx, m.queryIdx, n.trainIdx, n.queryIdx])
             if m.distance < 0.7*n.distance:
                 matchesMask[i] = [0,0]
+        print(points)
         exit(0)
 
         draw_params = dict(matchColor = (20, 200, 0),
