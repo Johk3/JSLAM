@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeLite_Workspace Name="JSLAMPLUS" Database="" Version="10.0.0">
+  <Project Name="jslam" Path="jslam/jslam.project" Active="No"/>
+  <Project Name="Solving_Problems" Path="../../../cpp/Solving_Problems/Solving_Problems.project" Active="Yes"/>
+  <VirtualDirectory Name="SP2">
+    <Project Name="sp2" Path="../../../cpp/Solving_Problems/sp2/sp2.project"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="lessons">
+    <Project Name="oop" Path="../../../cpp/oop/oop.project"/>
+  </VirtualDirectory>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Debug" Selected="no">
+      <Environment/>
+      <Project Name="jslam" ConfigName="Debug"/>
+      <Project Name="Solving_Problems" ConfigName="Debug"/>
+      <Project Name="main" ConfigName="Debug"/>
+      <Project Name="sp2" ConfigName="Debug"/>
+      <Project Name="oop" ConfigName="Debug"/>
+    </WorkspaceConfiguration>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Environment/>
+      <Project Name="jslam" ConfigName="Release"/>
+      <Project Name="Solving_Problems" ConfigName="Release"/>
+      <Project Name="main" ConfigName="Release"/>
+      <Project Name="sp2" ConfigName="Release"/>
+      <Project Name="oop" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+</CodeLite_Workspace>
