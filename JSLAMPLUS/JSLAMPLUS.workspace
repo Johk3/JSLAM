@@ -5,6 +5,9 @@
   <VirtualDirectory Name="SP2">
     <Project Name="sp2" Path="../../../cpp/Solving_Problems/sp2/sp2.project"/>
   </VirtualDirectory>
+  <VirtualDirectory Name="lessons">
+    <Project Name="oop" Path="../../../cpp/oop/oop.project"/>
+  </VirtualDirectory>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="no">
       <Environment/>
@@ -12,6 +15,7 @@
       <Project Name="Solving_Problems" ConfigName="Debug"/>
       <Project Name="main" ConfigName="Debug"/>
       <Project Name="sp2" ConfigName="Debug"/>
+      <Project Name="oop" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Environment/>
@@ -19,6 +23,7 @@
       <Project Name="Solving_Problems" ConfigName="Release"/>
       <Project Name="main" ConfigName="Release"/>
       <Project Name="sp2" ConfigName="Release"/>
+      <Project Name="oop" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>

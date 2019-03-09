@@ -3,8 +3,10 @@ import cv2
 import numpy as np
 from matplotlib import pyplot as plt
 from Components.display import Display
+from Components.display3 import D3Engine
 import keyboard
 import time
+from threading import Thread
 
 
 class Extractor:
@@ -38,11 +40,9 @@ class Extractor:
 
         # Ratio test as per Lowe's paper
         for i,(m,n) in enumerate(matches):
-            points.append([m.trainIdx, m.queryIdx, n.trainIdx, n.queryIdx])
+            points.append([n.trainIdx, n.queryIdx])
             if m.distance < 0.7*n.distance:
                 matchesMask[i] = [0,0]
-        print(points)
-        exit(0)
 
         draw_params = dict(matchColor = (20, 200, 0),
                            singlePointColor = (255, 0, 0),
@@ -61,6 +61,10 @@ if __name__ == "__main__":
     W = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH)) // 2
     extractor = Extractor()
     display = Display(W, H)
+    engine3D = D3Engine()
+
+    threads = []
+
     while 1:
         # Capture frame by frame and scale it down
 
@@ -82,7 +86,15 @@ if __name__ == "__main__":
 
         display.displayVideo(frame, extractor)
 
+        if not threads:
+            process = Thread(target=engine3D.display)
+            process.start()
+            threads.append(process)
+
     # When everything done, release the capture
+    print("Cleaning up....")
+    for process in threads:
+        process.join()
     display.cleanUp()
     # cap.release()
     # cv2.destroyAllWindows()

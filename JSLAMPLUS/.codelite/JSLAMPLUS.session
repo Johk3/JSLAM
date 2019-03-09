@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Session Name="/media/johk/Mainframe/PycharmProjects/JSLAM/JSLAMPLUS/JSLAMPLUS.workspace">
-  <int Value="5" Name="m_selectedTab"/>
+  <int Value="7" Name="m_selectedTab"/>
   <wxString Value="/media/johk/Mainframe/PycharmProjects/JSLAM/JSLAMPLUS/JSLAMPLUS.workspace" Name="m_workspaceName"/>
   <TabInfoArray Name="TabInfoArray">
     <TabInfo>
@@ -13,20 +13,20 @@
     <TabInfo>
       <wxString Value="/media/johk/Mainframe/cpp/Solving_Problems/sp2/main.cpp" Name="FileName"/>
       <int Value="0" Name="FirstVisibleLine"/>
-      <int Value="10" Name="CurrentLine"/>
+      <int Value="0" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
       <wxString Value="/media/johk/Mainframe/cpp/Solving_Problems/sp2/prime_numbers.cpp" Name="FileName"/>
-      <int Value="0" Name="FirstVisibleLine"/>
+      <int Value="11" Name="FirstVisibleLine"/>
       <int Value="13" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
       <wxString Value="/media/johk/Mainframe/cpp/Solving_Problems/main.cpp" Name="FileName"/>
-      <int Value="18" Name="FirstVisibleLine"/>
+      <int Value="25" Name="FirstVisibleLine"/>
       <int Value="27" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
@@ -42,6 +42,20 @@
       <wxString Value="/media/johk/Mainframe/cpp/Solving_Problems/sp2/randvector.cpp" Name="FileName"/>
       <int Value="0" Name="FirstVisibleLine"/>
       <int Value="27" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="/media/johk/Mainframe/cpp/oop/main.cpp" Name="FileName"/>
+      <int Value="46" Name="FirstVisibleLine"/>
+      <int Value="77" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="/media/johk/Mainframe/cpp/oop/bob_fighter.cpp" Name="FileName"/>
+      <int Value="16" Name="FirstVisibleLine"/>
+      <int Value="33" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
