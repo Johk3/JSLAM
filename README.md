@@ -65,17 +65,23 @@ pip install -r requirements.txt
 
 This is where you can see all the JSLAM version's
 
+0.5.0: 
+
+    Perspective is now able to follow the 3D camera.
+
+    Points are now transferred from 2D to 3D using Pickle.
+
 0.4.0: 
 
-    Started using threads to display 2D and 3D at the same time
+    Started using threads to display 2D and 3D at the same time.
 
     Created a 3D camera, and got the 2D points of our SLAM.
 
 0.3.0: 
 
-    Switched to SDL2 for displaying video
+    Switched to SDL2 for displaying video.
 
-    Performance updates
+    Performance updates.
 
 ## References 
 
@@ -134,7 +140,7 @@ SOFTWARE.
 
 ## Version Info 
 
-The current stable version of JSLAM is: 0.4.0  
+The current stable version of JSLAM is: 0.5.0  
 
 --- 
 
