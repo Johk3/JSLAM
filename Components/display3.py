@@ -10,6 +10,7 @@ import pickle
 
 class D3Engine:
     def __init__(self):
+        self.realPoints = []
         pass
 
     def display(self, d2display):
@@ -40,20 +41,29 @@ class D3Engine:
         offset = 1
 
         while not pangolin.ShouldQuit():
+            failed_to_load = False
             try:
                 points = pickle.load(open("data/points.p", "rb"))
             except Exception:
+                failed_to_load = True
                 pass
 
+            if not failed_to_load:
+                self.realPoints = []
+
+                for i, (xp, yp) in enumerate(points):
+                    self.realPoints.append([xp, yp, z])
+
             gl.glClear(gl.GL_COLOR_BUFFER_BIT | gl.GL_DEPTH_BUFFER_BIT)
-            gl.glClearColor(1.0, 1.0, 1.0, 1.0)
+            gl.glClearColor(0, 0, 0, 0)
             dcam.Activate(scam)
 
             # Draw Point Cloud
-            points = np.random.random((100000, 3)) * 10
-            gl.glPointSize(2)
-            gl.glColor3f(1.0, 0.0, 0.0)
-            pangolin.DrawPoints(points)
+            if not failed_to_load:
+                points = np.random.random((100000, 3)) * 10
+                gl.glPointSize(2)
+                gl.glColor3f(1.0, 0.0, 0.0)
+                pangolin.DrawPoints(points)
 
             # Load the camera
             pose = np.identity(4)
