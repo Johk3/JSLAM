@@ -43,7 +43,7 @@ if __name__ == "__main__":
         display.displayVideo(frame)
 
         if not threads:
-            process = Thread(target=engine3D.display, args=[display])
+            process = Thread(target=engine3D.display)
             process.start()
             threads.append(process)
 
