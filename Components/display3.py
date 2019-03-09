@@ -5,12 +5,16 @@ from OpenGL.GL import *
 from OpenGL.GLU import *
 from OpenGL.GLUT import *
 import pangolin
+import pickle
+
 
 class D3Engine:
     def __init__(self):
         pass
 
-    def display(self):
+    def display(self, d2display):
+        points = None
+
         W = 990
         H = 540
 
@@ -36,6 +40,11 @@ class D3Engine:
         offset = 1
 
         while not pangolin.ShouldQuit():
+            try:
+                points = pickle.load(open("data/points.p", "rb"))
+            except Exception:
+                pass
+
             gl.glClear(gl.GL_COLOR_BUFFER_BIT | gl.GL_DEPTH_BUFFER_BIT)
             gl.glClearColor(1.0, 1.0, 1.0, 1.0)
             dcam.Activate(scam)
